@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>currency Converter</title>
+</head>
+<body>
+	<h1>Currency Converter</h1>
+	USD: <input type="number" id="Dollar" oninput="calcDolr()" onchange="calcDolr()">
+	<br><br>
+	PKR: <input type="number" id="Pkr" oninput="calcPkr()" onchange="calcPkr()">
+</body>
+<script>
+    function calcDolr() {
+		var x = document.getElementById("Dollar").value
+		var y = document.getElementById("Pkr").value
+		document.getElementById("Pkr").value = x * 155
+	}
+
+	function calcPkr() {
+		var x = document.getElementById("Dollar").value
+		var y = document.getElementById("Pkr").value
+		document.getElementById("Dollar").value = y / 155
+	}
+</script>
+</html>
